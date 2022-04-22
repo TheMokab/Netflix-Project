@@ -1,0 +1,7 @@
+-- 3 - TV Shows added in 2021 by country -- 
+SELECT N.country AS 'Country', N.title AS 'Title', N.date_added AS 'Date Added'
+FROM 
+	Netflix.netflix_titles AS N
+WHERE N.date_added LIKE '%2021%' AND N.type = 'TV Show'
+GROUP BY N.country, N.title, N.date_added
+ORDER BY N.country
